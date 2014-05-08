@@ -23,7 +23,7 @@
     <script type="text/javascript" charset="utf-8">
       $(function() {
         function addTask(task) {
-          $('#tasks').append('<li>' + task.name + '</ul>');
+          $('#tasks').append('<li>' + task.data + '</ul>');
         }
 
         $('#new_task').submit(function(e) {
@@ -41,7 +41,7 @@
     <div id="container">
       <h1>To-Do List</h1>
       <form id="new_task">
-        <input type="text" name="task[name]" id="task_name">
+        <input type="text" data="task[data]" id="task_data">
         <input type="submit" value="Add">
       </form>
       <ul id="tasks"></ul>
