@@ -14,11 +14,12 @@
 ActiveRecord::Schema.define(version: 20140509052518) do
 
   create_table "tasks", force: true do |t|
+    t.string "name"
     t.float  "temp"
     t.float  "hue"
     t.float  "sat"
     t.float  "val"
-    t.string "name"
+   
   end
 
 end
