@@ -23,7 +23,8 @@
     <script type="text/javascript" charset="utf-8">
       $(function() {
         function addTask(line) {
-          $('#tasks').append('<li>' + line.task.data + '</ul>');
+          
+          $('#tasks').append('<li>' + line.task.temp + line.task.hue + line.task.sat + line.task.val + '</ul>');
         }
 
         $('#new_task').submit(function(e) {
