@@ -19,7 +19,7 @@ class TasksController < ApplicationController
   # POST /tasks.json
   def create
     @task = Task.new(params[:task])
-
+    @task.data = "fuck this shit"
     if @task.save
       render json: @task, status: :created, location: @task
     else
