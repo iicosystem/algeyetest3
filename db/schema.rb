@@ -14,9 +14,7 @@
 ActiveRecord::Schema.define(version: 20140509025037) do
 
   create_table "tasks", force: true do |t|
-    t.string   "data"
     t.datetime "created_at"
-    t.datetime "updated_at"
     t.float    "temp"
     t.float    "hue"
     t.float    "sat"
