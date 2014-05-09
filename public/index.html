@@ -4,7 +4,7 @@
     <title>To Do List</title>
     <style type="text/css" media="screen">
       html, body {
-        background-color: #4B7399;
+        background-color: #8dc53e;
         font-family: Verdana, Helvetica, Arial;
         font-size: 14px;
       }
@@ -39,9 +39,12 @@
     </script>
   <body>
     <div id="container">
-      <h1>To-Do List</h1>
+      <h1>AlgEYE Data Entry</h1>
       <form id="new_task">
-        <input type="text" name="task[data]" id="task_data">
+        Temperature: <input type="text" name="task[temp]" id="task_temp">
+        Hue: <input type="text" name="task[hue]" id="task_hue">
+        Sat: <input type="text" name="task[sat]" id="task_sat">
+        Val: <input type="text" name="task[val]" id="task_val">
         <input type="submit" value="Add">
       </form>
       <ul id="tasks"></ul>

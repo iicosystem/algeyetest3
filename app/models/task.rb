@@ -1,3 +1,3 @@
 class Task < ActiveRecord::Base
-	attr_accessible :data
+	attr_accessible :temp, :hue, :sat, :val
 end
