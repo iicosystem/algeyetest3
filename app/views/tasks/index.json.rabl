@@ -1,2 +1,2 @@
 collection @tasks
-attributes :id, :name, :temp, :hue, :sat, :val, :curTime
+attributes :id, :name, :temp, :hue, :sat, :val

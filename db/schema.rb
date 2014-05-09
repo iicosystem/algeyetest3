@@ -11,15 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140509052518) do
+ActiveRecord::Schema.define(version: 20140509201257) do
 
   create_table "tasks", force: true do |t|
-    t.string "name"
-    t.float  "temp"
-    t.float  "hue"
-    t.float  "sat"
-    t.float  "val"
-   
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.float    "temp"
+    t.float    "hue"
+    t.float    "sat"
+    t.float    "val"
   end
 
 end

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>AlgEYE Data Entry</title>
+    <style type="text/css" media="screen">
+      html, body {
+        background-color: #8dc53e;
+        font-family: Verdana, Helvetica, Arial;
+        font-size: 14px;
+      }
+      a { color: #0000FF; }
+
+      #container {
+        width: 75%;
+        margin: 0 auto;
+        background-color: #FFF;
+        padding: 20px 40px;
+        border: solid 1px black;
+        margin-top: 20px;
+      }
+    </style>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+    <script type="text/javascript" charset="utf-8">
+      $(function() {
+        function addTask(line) {
+          $('#tasks').append('<li>' + 'Name: ' + line.data + ', ' + 'Temp: ' + line.temp.toFixed(1) + ', ' + 'Hue: ' + line.hue.toFixed(1) + ', ' + 'Sat: ' + line.sat.toFixed(1) + ', ' + 'Val: ' + line.val.toFixed(1) + '</ul>');
+        }
+
+        $('#new_task').submit(function(e) {
+          $.post('/tasks', $(this).serialize(), addTask);
+          this.reset();
+          e.preventDefault();
+        });
+      });
+    </script>
+  <body>
+    <div id="container">
+      <h1>AlgEYE Data Entry</h1>
+      <form id="new_task">
+        Name: <input type="text" name="task[data]" id="task_data">
+        Temp: <input type="text" name="task[temp]" id="task_temp">
+        Hue: <input type="text" name="task[hue]" id="task_hue">
+        Sat: <input type="text" name="task[sat]" id="task_sat">
+        Val: <input type="text" name="task[val]" id="task_val">
+        <input type="submit" value="Add">
+      </form>
+      <ul id="tasks">
+        <% Task.all.each do |t| %>
+          <li>
+            Name: <%= t.data %>, 
+            Temp: <%= t.temp %>, 
+            Hue: <%= t.hue %>, 
+            Sat: <%= t.sat %>, 
+            Val: <%= t.val %>, 
+          </li>
+        <% end %>
+      </ul>
+    </div>
+  </body>
+</html>
