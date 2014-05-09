@@ -24,7 +24,7 @@
       $(function() {
         function addTask(line) {
           
-          $('#tasks').append('<li>' + line.task.temp + line.task.hue + line.task.sat + line.task.val + '</ul>');
+          $('#tasks').append('<li>' + line.task.name + line.task.temp + line.task.hue + line.task.sat + line.task.val + '</ul>');
 
         }
 
@@ -43,6 +43,7 @@
     <div id="container">
       <h1>AlgEYE Data Entry</h1>
       <form id="new_task">
+        Name: <input type="text" name="task[name]" id="task_name">
         Temperature: <input type="text" name="task[temp]" id="task_temp">
         Hue: <input type="text" name="task[hue]" id="task_hue">
         Sat: <input type="text" name="task[sat]" id="task_sat">

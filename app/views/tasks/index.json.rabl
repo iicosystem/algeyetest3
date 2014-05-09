@@ -1,3 +1,2 @@
-object "reactors"
 collection @tasks
-attributes :id, :temp, :hue, :sat, :val
+attributes :id, :name, :temp, :hue, :sat, :val, :curTime
